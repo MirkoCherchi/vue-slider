@@ -31,6 +31,7 @@ createApp({
       ],
       currentImg: 0,
       imgAttiva: 'active',
+      autoPlay: '',
     };
   },
   methods: {
@@ -49,7 +50,21 @@ createApp({
 
     selezionaImg(index) {
         this.currentImg = index;
-    }
-    
-  }
+        this.stopAutoplay();
+    },
+
+    startAutoplay() {
+        this.autoPlay = setInterval(() => {
+            this.next()
+        },3000);
+    },
+    stopAutoplay() {
+        clearInterval(this.autoPlay);
+        },  
+  },
+
+  mounted() {
+    this.startAutoplay();
+    },
+
 }).mount('#app');
