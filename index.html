@@ -30,7 +30,7 @@
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
                     <div v-for="(image, index) in immaginiThumb" class="thumb"
-                        :class="index === currentImg ? 'active' : '' ">
+                        :class="index === currentImg ? 'active' : '' " @click="selezionaImg(index)">
                         <img :src="image.immagine" :alt="image.titolo">
                     </div>
                 </div>

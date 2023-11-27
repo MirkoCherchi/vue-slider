@@ -45,6 +45,10 @@ createApp({
         if (this.currentImg < 0)
         this.currentImg = this.immaginiThumb.length - 1;
 
+    },
+
+    selezionaImg(index) {
+        this.currentImg = index;
     }
     
   }
