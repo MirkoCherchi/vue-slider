@@ -30,8 +30,7 @@ createApp({
         }
       ],
       currentImg: 0,
-      imgAttiva: 'active',
-      autoPlay: '',
+      autoPlay: null,
     };
   },
   methods: {
